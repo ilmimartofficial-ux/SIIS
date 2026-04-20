@@ -1588,7 +1588,7 @@ def main():
             st.dataframe(
                 df_abc.style.format({
                     "TOTAL_QTY":"{:,.1f}","TOTAL_OMZET":"Rp {:,.0f}","OMZET_CUM_PCT":"{:.1f}%"
-                }).applymap(
+                }).map(
                     lambda v: "background-color:#ccffcc" if v=="A" else
                               ("background-color:#fffde7" if v=="B" else "background-color:#ffcccc"),
                     subset=["KELAS_ABC"]
