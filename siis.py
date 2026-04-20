@@ -1345,7 +1345,7 @@ def main():
                 return "background-color:#ffcccc" if v == "KRITIS" else "background-color:#ccffcc"
 
             st.dataframe(
-                disp.style.applymap(color_status, subset=["STATUS"])
+                disp.style.map(color_status, subset=["STATUS"])
                     .format({c: fmt for c, fmt in {
                         "QTY":"{:,.1f}","TOTAL":"Rp {:,.0f}",
                         "HPP_FIFO_UNIT":"Rp {:,.0f}","HPP_FIFO_TOTAL":"Rp {:,.0f}",
